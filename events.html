@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Workshops - JustDance</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center transform hover:rotate-360 transition-transform duration-1000">
+                        <i class="fas fa-music text-white"></i>
+                    </div>
+                    <a href="index.html" class="text-xl md:text-2xl font-bold text-gray-900 whitespace-nowrap">JustDance</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <div class="relative">
+                        <button id="home-dropdown-button" class="text-gray-900 hover:text-pink-500 transition-colors font-medium whitespace-nowrap flex items-center space-x-1">
+                            <span>Home</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="home-dropdown-menu" class="hidden absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                            <a href="index.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Home1</a>
+                            <a href="home2.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Home2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">About</a>
+                    <a href="dance-styles.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Dance Styles</a>
+                    <a href="schedule.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Schedule</a>
+                    <a href="trainers.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Trainers</a>
+                    <a href="events.html" class="text-pink-500 font-bold whitespace-nowrap">Events</a>
+                    <a href="gallery.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Gallery</a>
+                    <a href="blog.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Blog</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Contact</a>
+                </div>
+                <!-- Desktop Account Dropdown -->
+                <div class="hidden lg:block relative">
+                    <button id="account-dropdown-button" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-4 xl:px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium whitespace-nowrap text-sm xl:text-base flex items-center space-x-2">
+                        <span>Account</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="account-dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                        <a href="login.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Login</a>
+                        <a href="register.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Register</a>
+                        <a href="dashboard.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Dashboard</a>
+                    </div>
+                </div>
+
+                <!-- Mobile/Tablet Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-900 hover:text-pink-500 transition-colors p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile/Tablet Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <button id="mobile-home-button" class="w-full flex items-center justify-between text-gray-900 hover:text-pink-500 transition-colors font-medium py-2">
+                        <span>Home</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobile-home-menu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="index.html" class="block text-gray-700 hover:text-pink-500 transition-colors py-1">Home1</a>
+                        <a href="home2.html" class="block text-gray-700 hover:text-pink-500 transition-colors py-1">Home2</a>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">About</a>
+                    <a href="dance-styles.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Dance Styles</a>
+                    <a href="schedule.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Schedule</a>
+                    <a href="trainers.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Trainers</a>
+                    <a href="events.html" class="text-pink-500 font-bold py-2">Events</a>
+                    <a href="gallery.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Gallery</a>
+                    <a href="blog.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Blog</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-rose-900/80 via-pink-900/80 to-fuchsia-900/80"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-400 bg-clip-text text-transparent">
+                        Events & Workshops
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Join us for exciting dance events and masterclasses</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Event 1 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-pink-500/20 to-orange-500/20 border border-pink-500/30 transform hover:scale-105 transition-all duration-500">
+                    <div class="absolute top-4 right-4 bg-pink-500 px-4 py-2 rounded-full text-sm font-bold z-10">New</div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-orange-500 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-calendar-alt text-3xl text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-pink-400">15</div>
+                                <div class="text-gray-400">June 2024</div>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-center">Summer Dance Festival</h3>
+                        <p class="text-gray-300 mb-6">Join us for an amazing weekend of dance performances, workshops, and competitions. Featuring world-renowned choreographers and dancers.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-clock mr-3 text-pink-400"></i>
+                                <span>June 15-17, 2024 | 10:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-map-marker-alt mr-3 text-pink-400"></i>
+                                <span>Main Studio & Outdoor Stage</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-users mr-3 text-pink-400"></i>
+                                <span>All Levels Welcome</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-pink-500 to-orange-500 py-3 rounded-full font-semibold hover:shadow-lg transition-all">Register Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 transform hover:scale-105 transition-all duration-500">
+                    <div class="absolute top-4 right-4 bg-purple-500 px-4 py-2 rounded-full text-sm font-bold z-10">Workshop</div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-star text-3xl text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-purple-400">8</div>
+                                <div class="text-gray-400">July 2024</div>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-center">Masterclass with Pro Choreographer</h3>
+                        <p class="text-gray-300 mb-6">Learn from world-renowned choreographer in this exclusive 2-day intensive workshop. Limited spots available!</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-clock mr-3 text-purple-400"></i>
+                                <span>July 8-9, 2024 | 9:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-map-marker-alt mr-3 text-purple-400"></i>
+                                <span>Main Studio</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-users mr-3 text-purple-400"></i>
+                                <span>Intermediate - Advanced</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 py-3 rounded-full font-semibold hover:shadow-lg transition-all">Register Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 transform hover:scale-105 transition-all duration-500">
+                    <div class="absolute top-4 right-4 bg-blue-500 px-4 py-2 rounded-full text-sm font-bold z-10">Guest</div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tie text-3xl text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-blue-400">22</div>
+                                <div class="text-gray-400">July 2024</div>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-center">Guest Choreographer Series</h3>
+                        <p class="text-gray-300 mb-6">Special guest choreographer from Broadway will teach contemporary dance techniques and choreography methods.</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-clock mr-3 text-blue-400"></i>
+                                <span>July 22, 2024 | 6:00 PM - 9:00 PM</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i>
+                                <span>Main Studio</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-users mr-3 text-blue-400"></i>
+                                <span>All Levels</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 py-3 rounded-full font-semibold hover:shadow-lg transition-all">Register Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-500/30 transform hover:scale-105 transition-all duration-500">
+                    <div class="absolute top-4 right-4 bg-orange-500 px-4 py-2 rounded-full text-sm font-bold z-10">Competition</div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-4">
+                                <i class="fas fa-trophy text-3xl text-white"></i>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-orange-400">5</div>
+                                <div class="text-gray-400">August 2024</div>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-center">Annual Dance Competition</h3>
+                        <p class="text-gray-300 mb-6">Showcase your skills in our annual competition. Categories for all ages and skill levels. Prizes and recognition for winners!</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-clock mr-3 text-orange-400"></i>
+                                <span>August 5, 2024 | 2:00 PM - 10:00 PM</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-map-marker-alt mr-3 text-orange-400"></i>
+                                <span>Outdoor Stage</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-users mr-3 text-orange-400"></i>
+                                <span>All Levels</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-orange-500 to-red-500 py-3 rounded-full font-semibold hover:shadow-lg transition-all">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-music text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold">JustDance</span>
+                    </div>
+                    <p class="text-gray-400">Transform your life through the art of dance.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-pink-500 transition-colors">About Us</a></li>
+                        <li><a href="dance-styles.html" class="hover:text-pink-500 transition-colors">Dance Styles</a></li>
+                        <li><a href="schedule.html" class="hover:text-pink-500 transition-colors">Schedule</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-pink-500 transition-colors">Contact Us</a></li>
+                        <li><a href="blog.html" class="hover:text-pink-500 transition-colors">Blog</a></li>
+                        <li><a href="events.html" class="hover:text-pink-500 transition-colors">Events</a></li>
+                        <li><a href="gallery.html" class="hover:text-pink-500 transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 JustDance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - JustDance</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center transform hover:rotate-360 transition-transform duration-1000">
+                        <i class="fas fa-music text-white"></i>
+                    </div>
+                    <a href="index.html" class="text-xl md:text-2xl font-bold text-gray-900 whitespace-nowrap">JustDance</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <div class="relative">
+                        <button id="home-dropdown-button" class="text-gray-900 hover:text-pink-500 transition-colors font-medium whitespace-nowrap flex items-center space-x-1">
+                            <span>Home</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="home-dropdown-menu" class="hidden absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                            <a href="index.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Home1</a>
+                            <a href="home2.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Home2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">About</a>
+                    <a href="dance-styles.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Dance Styles</a>
+                    <a href="schedule.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Schedule</a>
+                    <a href="trainers.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Trainers</a>
+                    <a href="events.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Events</a>
+                    <a href="gallery.html" class="text-pink-500 font-bold whitespace-nowrap">Gallery</a>
+                    <a href="blog.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Blog</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Contact</a>
+                </div>
+                <!-- Desktop Account Dropdown -->
+                <div class="hidden lg:block relative">
+                    <button id="account-dropdown-button" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-4 xl:px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium whitespace-nowrap text-sm xl:text-base flex items-center space-x-2">
+                        <span>Account</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="account-dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                        <a href="login.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Login</a>
+                        <a href="register.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Register</a>
+                        <a href="dashboard.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Dashboard</a>
+                    </div>
+                </div>
+                <!-- Mobile/Tablet Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-900 hover:text-pink-500 transition-colors p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile/Tablet Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <button id="mobile-home-button" class="w-full flex items-center justify-between text-gray-900 hover:text-pink-500 transition-colors font-medium py-2">
+                        <span>Home</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobile-home-menu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="index.html" class="block text-gray-700 hover:text-pink-500 transition-colors py-1">Home1</a>
+                        <a href="home2.html" class="block text-gray-700 hover:text-pink-500 transition-colors py-1">Home2</a>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">About</a>
+                    <a href="dance-styles.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Dance Styles</a>
+                    <a href="schedule.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Schedule</a>
+                    <a href="trainers.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Trainers</a>
+                    <a href="events.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Events</a>
+                    <a href="gallery.html" class="text-pink-500 font-bold py-2">Gallery</a>
+                    <a href="blog.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Blog</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Contact</a>
+                    
+    
+    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-violet-900/80 via-purple-900/80 to-fuchsia-900/80"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
+                        Gallery
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Capturing moments of passion, grace, and movement</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="py-8 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full font-semibold hover:shadow-lg transition-all">All</button>
+                <button class="px-6 py-3 bg-gray-700 rounded-full font-semibold hover:bg-gray-600 transition-all">Photos</button>
+                <button class="px-6 py-3 bg-gray-700 rounded-full font-semibold hover:bg-gray-600 transition-all">Videos</button>
+                <button class="px-6 py-3 bg-gray-700 rounded-full font-semibold hover:bg-gray-600 transition-all">Studio</button>
+                <button class="px-6 py-3 bg-gray-700 rounded-full font-semibold hover:bg-gray-600 transition-all">Events</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Photo Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <img src="https://images.pexels.com/photos/8973450/pexels-photo-8973450.jpeg" alt="Dance Photo 1" class="w-full h-80 object-cover transform group-hover:scale-125 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Hip-Hop Performance</h3>
+                            <p class="text-gray-300 text-sm">Summer Festival 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <img src="https://images.pexels.com/photos/8462907/pexels-photo-8462907.jpeg" alt="Dance Photo 2" class="w-full h-80 object-cover transform group-hover:scale-125 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Ballet Class</h3>
+                            <p class="text-gray-300 text-sm">Morning Session</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <img src="https://images.pexels.com/photos/28383079/pexels-photo-28383079.jpeg" alt="Dance Photo 3" class="w-full h-80 object-cover transform group-hover:scale-125 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Salsa Workshop</h3>
+                            <p class="text-gray-300 text-sm">Guest Instructor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <img src="https://images.pexels.com/photos/6069964/pexels-photo-6069964.jpeg" alt="Dance Photo 4" class="w-full h-80 object-cover transform group-hover:scale-125 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Contemporary Showcase</h3>
+                            <p class="text-gray-300 text-sm">Student Performance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <img src="https://images.pexels.com/photos/3775566/pexels-photo-3775566.jpeg" alt="Dance Photo 5" class="w-full h-80 object-cover transform group-hover:scale-125 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Zumba Fitness</h3>
+                            <p class="text-gray-300 text-sm">Evening Class</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <img src="https://images.pexels.com/photos/12312/pexels-photo-12312.jpeg" alt="Dance Photo 6" class="w-full h-80 object-cover transform group-hover:scale-125 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Studio Tour</h3>
+                            <p class="text-gray-300 text-sm">Our Facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Video Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <div class="relative aspect-video bg-gray-700 rounded-2xl overflow-hidden">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="<iframe width="560" height="315" src="https://www.youtube.com/embed/r3BvNyw0BJk?si=VbnnKZJQWWgga7MJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+                        </video>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-bold mb-2">Summer Festival Highlights</h3>
+                        <p class="text-gray-400">Watch the best moments from our annual summer dance festival</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <div class="relative aspect-video bg-gray-700 rounded-2xl overflow-hidden">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="https://videos.pexels.com/video-files/3044153/3044153-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-bold mb-2">Masterclass Session</h3>
+                        <p class="text-gray-400">Behind the scenes of our exclusive masterclass with guest choreographer</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <div class="relative aspect-video bg-gray-700 rounded-2xl overflow-hidden">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="https://videos.pexels.com/video-files/3044153/3044153-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-bold mb-2">Student Showcase</h3>
+                        <p class="text-gray-400">Amazing performances from our talented students</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <div class="relative aspect-video bg-gray-700 rounded-2xl overflow-hidden">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="https://videos.pexels.com/video-files/3044153/3044153-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-2xl font-bold mb-2">Studio Tour Video</h3>
+                        <p class="text-gray-400">Take a virtual tour of our state-of-the-art facilities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-music text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold">JustDance</span>
+                    </div>
+                    <p class="text-gray-400">Transform your life through the art of dance.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-pink-500 transition-colors">About Us</a></li>
+                        <li><a href="dance-styles.html" class="hover:text-pink-500 transition-colors">Dance Styles</a></li>
+                        <li><a href="schedule.html" class="hover:text-pink-500 transition-colors">Schedule</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-pink-500 transition-colors">Contact Us</a></li>
+                        <li><a href="blog.html" class="hover:text-pink-500 transition-colors">Blog</a></li>
+                        <li><a href="events.html" class="hover:text-pink-500 transition-colors">Events</a></li>
+                        <li><a href="gallery.html" class="hover:text-pink-500 transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 JustDance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

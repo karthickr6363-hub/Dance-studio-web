@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JustDance</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center transform hover:rotate-360 transition-transform duration-1000">
+                        <i class="fas fa-music text-white"></i>
+                    </div>
+                    <a href="index.html" class="text-xl md:text-2xl font-bold text-gray-900 whitespace-nowrap">JustDance</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <div class="relative">
+                        <button id="home-dropdown-button" class="text-gray-900 hover:text-pink-500 transition-colors font-medium whitespace-nowrap flex items-center space-x-1">
+                            <span>Home</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="home-dropdown-menu" class="hidden absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                            <a href="index.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Home1</a>
+                            <a href="home2.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Home2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">About</a>
+                    <a href="dance-styles.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Dance Styles</a>
+                    <a href="schedule.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Schedule</a>
+                    <a href="trainers.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Trainers</a>
+                    <a href="events.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Events</a>
+                    <a href="gallery.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Gallery</a>
+                    <a href="blog.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Blog</a>
+                    <a href="contact.html" class="text-pink-500 font-bold whitespace-nowrap">Contact</a>
+                </div>
+                <!-- Desktop Account Dropdown -->
+                <div class="hidden lg:block relative">
+                    <button id="account-dropdown-button" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-4 xl:px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium whitespace-nowrap text-sm xl:text-base flex items-center space-x-2">
+                        <span>Account</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="account-dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                        <a href="login.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Login</a>
+                        <a href="register.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Register</a>
+                        <a href="dashboard.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Dashboard</a>
+                    </div>
+                </div>
+
+                <!-- Mobile/Tablet Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-900 hover:text-pink-500 transition-colors p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile/Tablet Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <button id="mobile-home-button" class="w-full flex items-center justify-between text-gray-900 hover:text-pink-500 transition-colors font-medium py-2">
+                        <span>Home</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobile-home-menu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="index.html" class="block text-gray-700 hover:text-pink-500 transition-colors py-1">Home1</a>
+                        <a href="home2.html" class="block text-gray-700 hover:text-pink-500 transition-colors py-1">Home2</a>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">About</a>
+                    <a href="dance-styles.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Dance Styles</a>
+                    <a href="schedule.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Schedule</a>
+                    <a href="trainers.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Trainers</a>
+                    <a href="events.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Events</a>
+                    <a href="gallery.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Gallery</a>
+                    <a href="blog.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Blog</a>
+                    <a href="contact.html" class="text-pink-500 font-bold py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-teal-900/80 to-cyan-900/80"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+                        Contact Us
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Get in touch with us - we'd love to hear from you!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent text-center whitespace-nowrap">Send us a Message</h2>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-300 mb-2">Name</label>
+                            <input type="text" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-pink-500 transition-colors" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Email</label>
+                            <input type="email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-pink-500 transition-colors" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Phone</label>
+                            <input type="tel" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-pink-500 transition-colors" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Subject</label>
+                            <select class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-pink-500 transition-colors">
+                                <option>General Inquiry</option>
+                                <option>Class Booking</option>
+                                <option>Event Information</option>
+                                <option>Membership</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 mb-2">Message</label>
+                            <textarea rows="6" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-pink-500 transition-colors" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-orange-500 py-4 rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
+                        <h2 class="text-2xl sm:text-3xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent text-center whitespace-nowrap">Get in Touch</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Address</h3>
+                                    <p class="text-gray-400">123 Dance Street<br>New York, NY 10001<br>United States</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Phone</h3>
+                                    <p class="text-gray-400">+1 (555) 123-4567<br>+1 (555) 123-4568</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Email</h3>
+                                    <p class="text-gray-400">info@justdance.com<br>support@justdance.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-clock text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-2">Hours</h3>
+                                    <p class="text-gray-400">Mon-Fri: 6:00 AM - 10:00 PM<br>Sat-Sun: 8:00 AM - 8:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                <i class="fab fa-facebook-f text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                <i class="fab fa-twitter text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                                <i class="fab fa-youtube text-white text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="mt-12 bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden border border-gray-700">
+                <div class="h-96 bg-gray-700 flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-6xl text-gray-600 mb-4"></i>
+                        <p class="text-gray-400">Google Maps Integration</p>
+                        <p class="text-gray-500 text-sm mt-2">123 Dance Street, New York, NY 10001</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-music text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold">JustDance</span>
+                    </div>
+                    <p class="text-gray-400">Transform your life through the art of dance.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-pink-500 transition-colors">About Us</a></li>
+                        <li><a href="dance-styles.html" class="hover:text-pink-500 transition-colors">Dance Styles</a></li>
+                        <li><a href="schedule.html" class="hover:text-pink-500 transition-colors">Schedule</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-pink-500 transition-colors">Contact Us</a></li>
+                        <li><a href="blog.html" class="hover:text-pink-500 transition-colors">Blog</a></li>
+                        <li><a href="events.html" class="hover:text-pink-500 transition-colors">Events</a></li>
+                        <li><a href="gallery.html" class="hover:text-pink-500 transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 JustDance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

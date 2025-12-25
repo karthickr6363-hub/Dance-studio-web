@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - JustDance</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center transform hover:rotate-360 transition-transform duration-1000">
+                        <i class="fas fa-music text-white"></i>
+                    </div>
+                    <a href="index.html" class="text-xl md:text-2xl font-bold text-gray-900 whitespace-nowrap">JustDance</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <div class="relative">
+                        <button id="home-dropdown-button" class="text-gray-900 hover:text-pink-500 transition-colors font-medium whitespace-nowrap flex items-center space-x-1">
+                            <span>Home</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="home-dropdown-menu" class="hidden absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                            <a href="index.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Home1</a>
+                            <a href="home2.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Home2</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">About</a>
+                    <a href="dance-styles.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Dance Styles</a>
+                    <a href="schedule.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Schedule</a>
+                    <a href="trainers.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Trainers</a>
+                    <a href="events.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Events</a>
+                    <a href="gallery.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Gallery</a>
+                    <a href="blog.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Blog</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-pink-500 transition-colors whitespace-nowrap">Contact</a>
+                </div>
+                <!-- Desktop Account Dropdown -->
+                <div class="hidden lg:block relative">
+                    <button id="account-dropdown-button" class="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-4 xl:px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 font-medium whitespace-nowrap text-sm xl:text-base flex items-center space-x-2">
+                        <span>Account</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="account-dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                        <a href="login.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Login</a>
+                        <a href="register.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Register</a>
+                        <a href="dashboard.html" class="block px-4 py-2 text-gray-900 hover:bg-pink-50 hover:text-pink-500 transition-colors">Dashboard</a>
+                    </div>
+                </div>
+
+                <!-- Mobile/Tablet Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-900 hover:text-pink-500 transition-colors p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile/Tablet Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <button id="mobile-home-button" class="w-full flex items-center justify-between text-gray-900 hover:text-pink-500 transition-colors font-medium py-2">
+                        <span>Home</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="mobile-home-menu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="index.html" class="block text-gray-700 hover:text-pink-500 transition-colors py-1">Home1</a>
+                        <a href="home2.html" class="block text-gray-700 hover:text-pink-500 transition-colors py-1">Home2</a>
+                    </div>
+                    <a href="about.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">About</a>
+                    <a href="dance-styles.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Dance Styles</a>
+                    <a href="schedule.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Schedule</a>
+                    <a href="trainers.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Trainers</a>
+                    <a href="events.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Events</a>
+                    <a href="gallery.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Gallery</a>
+                    <a href="blog.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Blog</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-pink-500 transition-colors py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-yellow-900/80 to-orange-900/80"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                        Testimonials
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Hear from our amazing students and their journey</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Grid -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-pink-500/30 transform hover:scale-105 transition-all duration-500 hover:border-pink-500">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Jessica" class="w-16 h-16 rounded-full mr-4 border-2 border-pink-500">
+                        <div>
+                            <h4 class="font-bold text-lg">Jessica Martinez</h4>
+                            <p class="text-pink-400 text-sm">Hip-Hop Student</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"JustDance transformed my life! The trainers are amazing and the energy is incredible. I've never felt more confident and free. The community here is so supportive!"</p>
+                    <div class="text-sm text-gray-500">Joined: 2 years ago</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-orange-500/30 transform hover:scale-105 transition-all duration-500 hover:border-orange-500">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100" alt="Michael" class="w-16 h-16 rounded-full mr-4 border-2 border-orange-500">
+                        <div>
+                            <h4 class="font-bold text-lg">Michael Chen</h4>
+                            <p class="text-orange-400 text-sm">Salsa Student</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"Best dance studio in town! The instructors are patient, professional, and make learning so much fun. I've improved so much in just 6 months. Highly recommend!"</p>
+                    <div class="text-sm text-gray-500">Joined: 6 months ago</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-purple-500/30 transform hover:scale-105 transition-all duration-500 hover:border-purple-500">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100" alt="Sophie" class="w-16 h-16 rounded-full mr-4 border-2 border-purple-500">
+                        <div>
+                            <h4 class="font-bold text-lg">Sophie Anderson</h4>
+                            <p class="text-purple-400 text-sm">Ballet Student</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"I've been dancing here for 2 years and it's been an amazing journey. The community is supportive and welcoming. Sarah is an incredible ballet instructor!"</p>
+                    <div class="text-sm text-gray-500">Joined: 2 years ago</div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-blue-500/30 transform hover:scale-105 transition-all duration-500 hover:border-blue-500">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="David" class="w-16 h-16 rounded-full mr-4 border-2 border-blue-500">
+                        <div>
+                            <h4 class="font-bold text-lg">David Thompson</h4>
+                            <p class="text-blue-400 text-sm">Contemporary Student</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"The contemporary classes have helped me express myself in ways I never thought possible. Emma is a fantastic teacher who really understands movement and emotion."</p>
+                    <div class="text-sm text-gray-500">Joined: 1 year ago</div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-red-500/30 transform hover:scale-105 transition-all duration-500 hover:border-red-500">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Lisa" class="w-16 h-16 rounded-full mr-4 border-2 border-red-500">
+                        <div>
+                            <h4 class="font-bold text-lg">Lisa Park</h4>
+                            <p class="text-red-400 text-sm">Zumba Student</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"Zumba classes are so much fun! It's the perfect workout that doesn't feel like work. Maria's energy is infectious and I've lost 15 pounds since joining!"</p>
+                    <div class="text-sm text-gray-500">Joined: 8 months ago</div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-3xl border border-green-500/30 transform hover:scale-105 transition-all duration-500 hover:border-green-500">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Rachel" class="w-16 h-16 rounded-full mr-4 border-2 border-green-500">
+                        <div>
+                            <h4 class="font-bold text-lg">Rachel Kim</h4>
+                            <p class="text-green-400 text-sm">Multiple Styles</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-4">"I take multiple classes here and love the variety. The facilities are top-notch and all the instructors are professional. This place has become my second home!"</p>
+                    <div class="text-sm text-gray-500">Joined: 3 years ago</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonials -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">Video Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <div class="relative aspect-video bg-gray-700 rounded-2xl overflow-hidden">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="https://videos.pexels.com/video-files/3044153/3044153-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold mb-2">Jessica's Journey</h3>
+                        <p class="text-gray-400">Hear how JustDance changed Jessica's life</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl transform hover:scale-105 transition-all duration-500">
+                    <div class="relative aspect-video bg-gray-700 rounded-2xl overflow-hidden">
+                        <video class="w-full h-full object-cover" controls>
+                            <source src="https://videos.pexels.com/video-files/3044153/3044153-hd_1920_1080_30fps.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold mb-2">Michael's Story</h3>
+                        <p class="text-gray-400">From beginner to confident dancer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-music text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold">JustDance</span>
+                    </div>
+                    <p class="text-gray-400">Transform your life through the art of dance.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-pink-500 transition-colors">About Us</a></li>
+                        <li><a href="dance-styles.html" class="hover:text-pink-500 transition-colors">Dance Styles</a></li>
+                        <li><a href="schedule.html" class="hover:text-pink-500 transition-colors">Schedule</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-pink-500 transition-colors">Contact Us</a></li>
+                        <li><a href="blog.html" class="hover:text-pink-500 transition-colors">Blog</a></li>
+                        <li><a href="events.html" class="hover:text-pink-500 transition-colors">Events</a></li>
+                        <li><a href="gallery.html" class="hover:text-pink-500 transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 JustDance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
